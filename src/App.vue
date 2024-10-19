@@ -6,13 +6,16 @@
   <div class="grid place-items-center">
     <div class="bg-white rounded-2xl ml-10 mt-20 gap-2 grid grid-cols-2 w-fit h-[550px] place-content-center">
       <section class="p-5 h-fit w-[500px] flex flex-col">
-        <section class="flex items-center justify-between">
+        <section class="flex mt-5 items-center justify-between">
           <p class="text-2xl font-jakarta font-bold">Mortgage Calculator</p>
-          <p class="text-slate-500 underline decoration-solid underline-offset-4">Clear all</p>
+          <p class="text-slate-500 text-sm underline decoration-solid underline-offset-4">Clear all</p>
         </section>
-        <form class="pt-5">
+        <form class="pt-5 relative">
           <label class="text-md font-jakarta">Mortgage Amount</label>
-          <input type="text" class="mortgage rounded-md w-full font-bold p-2 text-2xl border-2 mt-2" placeholder="$0.00">
+          <section class="flex items-center rounded-md border-2 w-full">
+            <p class="mx-5 border-2">$</p>
+            <input type="text" class="mortgage rounded-md font-bold p-2 text-2xl text-left" placeholder="$0.00">
+          </section>
         </form>
         <section class="flex space-x-11 pt-5">
           <form class="flex flex-col">
@@ -45,6 +48,20 @@
           </svg>
           <h2 class="text-white text-2xl font-jakarta font-bold">Results shown here</h2>
           <p class="text-slate-500 text-center p-5 font-jakarta">Complete the form and click "calculate repayments" to see what your monthly repayments would be</p>
+        </section>
+        <section class="p-6 space-y-3 mb-20 hidden">
+          <h2 class="text-white text-2xl font-jakarta font-bold">Your results</h2>
+          <p class="text-white font-jakarta">Your results are shown below based on the information you provided. To adjust the results, edit the form and click "calculate repayments" again.</p>
+          <section class="bg-slate-950 p-5 rounded-md space-y-8 divide-y">
+            <section class="space-y-3">
+              <p class="text-slate-500">Your monthly repayments</p>
+              <p class="text-lime font-jakarta font-bold text-4xl">$1,794.74</p>
+            </section>
+            <section class="space-y-3 py-5">
+              <p class="text-slate-500">Total you'll repay over the term</p>
+              <p class="font-jakarta font-bold text-white text-xl">$539,322.94</p>
+            </section>
+          </section>
         </section>
       </section>
     </div>
